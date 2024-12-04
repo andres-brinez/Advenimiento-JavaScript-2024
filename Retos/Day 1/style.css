@@ -1,0 +1,54 @@
+.container {
+  width: 35%;
+  display: flex;
+  margin: 0 auto;
+  padding: 5px 20px;
+  padding-left: 10px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.hide {
+  background-color: #26C9C3;
+  transition: background-color 0.3s;
+
+}
+
+.show {
+  background-color: #18124A;
+  transition: background-color 0.3s;
+
+}
+
+.logoCandado {
+  height: 50%;
+  padding-top: 5px;
+  color: #18124A ;
+}
+
+input {
+  outline: none;
+  border: none;
+  background-color: inherit;
+  border-left: solid 2px #E6F2F1;
+  padding-left: 10px;
+  font-size: 20px;
+  width: 80%;
+}
+
+.show input {
+  color: #E6F2F1;
+}
+
+.show .logoCandado {
+  color: #26C9C3;
+  transition: color 0.3s;
+  /* Transición para un efecto suave */
+}
+
+.logoOjo {
+  background-color: #18124A;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+}
