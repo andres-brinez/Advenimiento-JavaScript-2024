@@ -1,28 +1,36 @@
 
-const logoPassword = document.getElementById("logoOjo")
+const ojoAbierto = document.getElementById("logoOjoAbierto")
+const ojoCerrado = document.getElementById("logoOjoCerrado")
+
 const inputPassword = document.getElementById("inputPassword");
 const container = document.getElementsByClassName("container")[0]
-logoPassword.addEventListener("click", () =>{
 
-  if(inputPassword.type=== "password"){
-    showPassword()
-  }
-  else{
-  hidePassword();
-  }
-  
+ojoAbierto.addEventListener("click", () => {
+  showPassword()
+
+  container.classList.remove("passwordHide");
+  container.classList.add("passwordShow");
+
+  ojoAbierto.classList.add("hide");
+  ojoCerrado.classList.remove("hide");
 
 })
 
+ojoCerrado.addEventListener("click", () => {
+  hidePassword();
 
-function showPassword(){
-  inputPassword.type="text";
-  container.classList.remove("hide");
-  container.classList.add("show");
+  container.classList.remove("passwordShow");
+  container.classList.add("passwordHide");
+
+  ojoAbierto.classList.remove("hide");
+  ojoCerrado.classList.add("hide");
+})
+
+
+function showPassword() {
+  inputPassword.type = "text";
 }
 
-function hidePassword(){
-  inputPassword.type="password";
-  container.classList.remove("show");
-  container.classList.add("hide");
+function hidePassword() {
+  inputPassword.type = "password";
 }
