@@ -1,29 +1,33 @@
+:root{
+  --colorShow: #18124A;
+  --colorHide: #26C9C3;
+
+}
+
 .container {
-  width: 35%;
+  width: 40%;
   display: flex;
   margin: 0 auto;
   padding: 5px 20px;
-  padding-left: 10px;
   height: 60px;
   border-radius: 10px;
 }
 
-.hide {
-  background-color: #26C9C3;
+.passwordHide {
+  background-color:var(--colorHide) ;
   transition: background-color 0.3s;
-
 }
 
-.show {
-  background-color: #18124A;
+.passwordShow {
+  background-color: var(--colorShow);
   transition: background-color 0.3s;
+
 
 }
 
 .logoCandado {
   height: 50%;
   padding-top: 5px;
-  color: #18124A ;
 }
 
 input {
@@ -36,19 +40,24 @@ input {
   width: 80%;
 }
 
-.show input {
+.passwordShow input {
   color: #E6F2F1;
 }
 
-.show .logoCandado {
-  color: #26C9C3;
+.passwordShow .logoCandado {
+  color: var(--colorHide);
   transition: color 0.3s;
   /* Transición para un efecto suave */
 }
 
 .logoOjo {
-  background-color: #18124A;
+  background-color: var(--colorShow);
   padding: 5px;
   border-radius: 50%;
   cursor: pointer;
 }
+
+.hide{
+  display: none;
+}
+
